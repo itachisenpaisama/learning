@@ -12,28 +12,30 @@
 #wird.
 
 Noten_Liste = []
-i = 0
 
 print("Gib Noten zwischen 1 und 6 ein. Gib eine Zahl außerhalb dieser Reichweite ein, um die Eingabe zu beenden:")
+
 while True:
-    Note = int(input())
-    if Note >= 1 and Note <= 6:
-        Noten_Liste.append(Note)
-    else:
-        break
+    try:
+        Note = int(input())
+        if Note >= 1 and Note <= 6:
+            Noten_Liste.append(Note)
+        else:
+            break
+    except ValueError:
+        print("Das keine Zahl nh")
 
-#Noten_Liste.pop()    
-Noten_Liste.sort()
-print(f"Die Noten lauten: {Noten_Liste}")
+if len(Noten_Liste) > 0:  
+    Noten_Liste.sort()
+    print(f"Die Noten lauten: {Noten_Liste}")
 
 
-print(f"Die beste Note ist eine {Noten_Liste[0]} und die schlechteste ist eine {Noten_Liste[len(Noten_Liste)-1]}")
+    print(f"Die beste Note ist eine {Noten_Liste[0]} und die schlechteste ist eine {Noten_Liste[-1]}")
 
-summe = 0
+    summe = sum(Noten_Liste)
 
-for i in range(0,len(Noten_Liste)):
-    summe = sum(Noten_Liste[i])
-    
-average = summe / len(Noten_Liste)
+    average = summe / len(Noten_Liste)
 
-print(f"Der Durchschnitt ist {average:.1f}")
+    print(f"Der Durchschnitt ist {average:.1f}")
+else:
+    print("Schön blöd nh")
