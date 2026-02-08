@@ -1,0 +1,5 @@
+[Mon Jan 26 12:11:52 2026] PHP 8.3.14 Development Server (http://0.0.0.0:8000) started
+[Mon Jan 26 12:12:02 2026] 127.0.0.1:39374 Accepted
+[Mon Jan 26 12:12:02 2026] Xdebug: [Step Debug] Could not connect to debugging client. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Mon Jan 26 12:12:02 2026] 127.0.0.1:39374 [200]: GET /
+[Mon Jan 26 12:12:02 2026] 127.0.0.1:39374 Closing
